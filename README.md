@@ -17,10 +17,12 @@ in the the anaconda terminal when inside the directory containing the yml file.
 ### installation troubleshooting:
 Users may encounter issues when installing the 'wbenv.yml' in the anaconda terminal. Error message may be: 
 ```python
-`'CondaVerificationError: The package for jedi located at XXX appears to be corrupted...'`
+'CondaVerificationError: The package for jedi located at XXX appears to be corrupted...'
+```
 AND/OR 
 ```python
-`'ClobberError: This transaction has incompatible packages due to a shared path...'` 
+'ClobberError: This transaction has incompatible packages due to a shared path...'
+```
 The workaround for this is to do the following: 
 1. Remove the environment you created during set-up: conda -remove PATH.yml
 2. Enter: `conda -clean --all` to remove index cache, lock files, unused cache packages, and tarballs.
