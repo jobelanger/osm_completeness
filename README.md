@@ -15,7 +15,7 @@ The conda environment necessary to run the Jupyter notebooks can be installed us
 in the the anaconda terminal when inside the directory containing the yml file. 
 
 ### installation troubleshooting:
-Users may encounter issues when installing the 'wbenv.yml' in the anaconda terminal. Error message may be similar to one or both of the following: 
+Users may encounter issues when installing the `wbenv.yml` in the anaconda terminal. Error message may be similar to one or both of the following: 
 ```python
 'CondaVerificationError: The package for jedi located at [PATH] appears to be corrupted...'
 'ClobberError: This transaction has incompatible packages due to a shared path...'
@@ -26,7 +26,7 @@ The workaround for this is to do the following:
 3. Re-install the environment using: `conda env create --name envname --file wbenv.yml`
 
 
-Windows machines may encounter an issue with the rtree dependency for geopandas, specifically the error `'OSError: could not find or load spatialindex_c-64.dll'` when importing geopandas. The workaround is to find the `core.py` file in the rtree library and change the line:<br>
+Windows machines may also encounter an issue with the rtree dependency for geopandas, specifically the error `'OSError: could not find or load spatialindex_c-64.dll'` when importing geopandas. The workaround is to find the `core.py` file in the rtree library and change the line:<br>
 ```python
 elif 'conda' in sys.version:
 ```
