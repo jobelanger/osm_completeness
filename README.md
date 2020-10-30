@@ -10,9 +10,9 @@ This series of notebooks uses a random forest regression model with google earth
 6. Results of `ApplyModel.ipynb` can be visualized in a second [Observable notebook](https://observablehq.com/d/09da0d4f932c9310). Be aware of a 15 MB limit to the file that can be attached to the notebook. For example, Kabul Province was divided into 4 pieces in order to be visualized. 
 
 ## contents:
-- afghanistan/ - this folder contains notebooks used for the Afghanistan implementation of the OSM Completeness tool. Notebooks with '602' in the name used Jo's 602 training samples for Kabul and Jalalabad areas. Notebooks with '602_LC_DEM' in the name include substitution for a multiclass landcover dataset and higher resolution DEM data.
-- envs/ - this folder contains the environment.yml file
-- notebooks/ - this folder contains the original notebooks from Corey's Afghanistan implementation. 
+- `afghanistan` - this folder contains notebooks used for the Afghanistan implementation of the OSM Completeness tool. Notebooks with '602' in the name used Jo's 602 training samples for Kabul and Jalalabad areas. Notebooks with '602_LC_DEM' in the name include substitution for a multiclass landcover dataset and higher resolution DEM data.
+- `envs` - this folder contains the environment.yml file
+- `notebooks` - this folder contains the original notebooks from Corey's Afghanistan implementation. 
 # environment set-up:
 The conda environment necessary to run the Jupyter notebooks can be installed using the file `envs/wbenv.yml`. To build it enter:<br>
 `conda env create --name envname --file wbenv.yml`<br>
