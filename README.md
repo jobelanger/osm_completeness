@@ -9,12 +9,16 @@ This series of notebooks uses a random forest regression model with google earth
 5. `ApplyModel.ipynb` &mdash; (jupyter) run the tessellation AOI through the trained model to calculate predicted OSM footprint area
 6. Results of `ApplyModel.ipynb` can be visualized in a second [Observable notebook](https://observablehq.com/d/09da0d4f932c9310). Be aware of a 15 MB limit to the file that can be attached to the notebook. For example, Kabul Province was divided into 4 pieces in order to be visualized. 
 
-## environment set-up:
+## contents:
+- afghanistan/ - this folder contains notebooks used for the Afghanistan implementation of the OSM Completeness tool. Notebooks with '602' in the name used Jo's 602 training samples for Kabul and Jalalabad areas. Notebooks with '602_LC_DEM' in the name include substitution for a multiclass landcover dataset and higher resolution DEM data.
+- envs/ - this folder contains the environment.yml file
+- notebooks/ - this folder contains the original notebooks from Corey's Afghanistan implementation. 
+# environment set-up:
 The conda environment necessary to run the Jupyter notebooks can be installed using the file `envs/wbenv.yml`. To build it enter:<br>
 `conda env create --name envname --file wbenv.yml`<br>
 in the the anaconda terminal when inside the directory containing the yml file. 
 
-### installation troubleshooting:
+## installation troubleshooting:
 Users may encounter issues when installing the `wbenv.yml` in the anaconda terminal. Error message may be similar to one or both of the following: 
 ```python
 'CondaVerificationError: The package for jedi located at [PATH] appears to be corrupted...'
