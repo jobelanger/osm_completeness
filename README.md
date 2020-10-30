@@ -9,9 +9,25 @@ This series of notebooks uses a random forest regression model with google earth
 5. `ApplyModel.ipynb` &mdash; (jupyter) run the tessellation AOI through the trained model to calculate predicted OSM footprint area
 6. Results of `ApplyModel.ipynb` can be visualized in a second [Observable notebook](https://observablehq.com/d/09da0d4f932c9310). Be aware of a 15 MB limit to the file that can be attached to the notebook. For example, Kabul Province was divided into 4 pieces in order to be visualized. 
 
+## environment set-up:
 The conda environment necessary to run the Jupyter notebooks can be installed using the file `envs/wbenv.yml`. To build it enter:<br>
 `conda env create --name envname --file wbenv.yml`<br>
-in the the anaconda terminal when inside the directory containing the yml file. Windows machines may encounter an issue with the rtree dependency for geopandas, specifically the error `'OSError: could not find or load spatialindex_c-64.dll'` when importing geopandas. The workaround is to find the `core.py` file in the rtree library and change the line:<br>
+in the the anaconda terminal when inside the directory containing the yml file. 
+
+### installation troubleshooting:
+Users may encounter issues when installing the 'wbenv.yml' in the anaconda terminal. Error message may be: 
+```python
+`'CondaVerificationError: The package for jedi located at XXX appears to be corrupted...'`
+AND/OR 
+```python
+`'ClobberError: This transaction has incompatible packages due to a shared path...'` 
+The workaround for this is to do the following: 
+1. Remove the environment you created during set-up: conda -remove PATH.yml
+2. Enter: `conda -clean --all` to remove index cache, lock files, unused cache packages, and tarballs.
+3. Re-install the environment using: `conda env create --name envname --file wbenv.yml`
+
+
+Windows machines may encounter an issue with the rtree dependency for geopandas, specifically the error `'OSError: could not find or load spatialindex_c-64.dll'` when importing geopandas. The workaround is to find the `core.py` file in the rtree library and change the line:<br>
 ```python
 elif 'conda' in sys.version:
 ```
